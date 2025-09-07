@@ -1,9 +1,9 @@
 -- #1
 doubleEven :: [Int] -> [Int]
-doubleEven xs = [If even x then 2 * x else x | x <- xs]
+doubleEven xs = [if even x then 2 * x else x | x <- xs]
 
 -- #2
-sunOdd :: [Int] -> Int
+sumOdd :: [Int] -> Int
 sumOdd xs = sum[x | x <- xs, odd x]
 
 -- #3
@@ -33,4 +33,15 @@ pythagoreanTriples = [(a,b,c) | a <- [1..20], b <- [1..20], c <- [1..20], a^2 + 
 fib :: Int -> Int
 fib 0 = 0
 fib 1 = 1
-fib n = fib (n-1) + fid (n-2)
+fib n = fib (n-1) + fib (n-2)
+
+main :: IO ()
+main = do
+    print (doubleEven [1,2,3,4])
+    print (sumOdd [1,2,3,4,5])
+    print (absList [-3,5,-7])
+    print (myLength [1,2,3,4])
+    print (myReverse [1,2,3])
+    print (myMaximum [3,7,2,9,4])
+    print (take 5 pythagoreanTriples)
+    print (fib 10)
